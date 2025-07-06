@@ -1844,3 +1844,323 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Enhanced Services Page Styles
+--------------------------------------------------------------*/
+
+/* Services Overview Section */
+.services-overview {
+  padding: 80px 0;
+}
+
+.services-overview .service-item {
+  background: var(--surface-color);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.services-overview .service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.services-overview .service-img {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.services-overview .service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.services-overview .service-item:hover .service-img img {
+  transform: scale(1.1);
+}
+
+.services-overview .service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 74, 23, 0.8), rgba(39, 61, 78, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.services-overview .service-item:hover .service-overlay {
+  opacity: 1;
+}
+
+.services-overview .service-overlay .icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.services-overview .service-item:hover .service-overlay .icon {
+  transform: scale(1);
+}
+
+.services-overview .service-overlay .icon i {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.services-overview .service-content {
+  padding: 30px;
+}
+
+.services-overview .service-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.services-overview .service-content p {
+  color: var(--default-color);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.services-overview .service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.services-overview .service-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--default-color);
+}
+
+.services-overview .service-features li i {
+  color: var(--accent-color);
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.services-overview .service-cta {
+  text-align: center;
+}
+
+.services-overview .service-cta .btn-get-started {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.services-overview .service-cta .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  transform: translateY(-2px);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 80px 0;
+  background: var(--background-color);
+}
+
+.why-choose-us .feature-box {
+  padding: 30px 20px;
+  background: var(--surface-color);
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.why-choose-us .feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.why-choose-us .icon-box {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 25%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.why-choose-us .feature-box:hover .icon-box {
+  transform: scale(1.1);
+}
+
+.why-choose-us .icon-box i {
+  font-size: 2rem;
+  color: var(--contrast-color);
+}
+
+.why-choose-us .feature-box h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.why-choose-us .feature-box p {
+  color: var(--default-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--heading-color), color-mix(in srgb, var(--heading-color), transparent 20%));
+  color: var(--contrast-color);
+}
+
+.contact-cta h2 {
+  color: var(--contrast-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.contact-cta .cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-cta .btn-get-started {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-cta .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  transform: translateY(-2px);
+  color: var(--contrast-color);
+}
+
+.contact-cta .btn-watch-video {
+  background: transparent;
+  color: var(--contrast-color);
+  padding: 15px 35px;
+  border: 2px solid var(--contrast-color);
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-cta .btn-watch-video:hover {
+  background: var(--contrast-color);
+  color: var(--heading-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-overview .service-img {
+    height: 200px;
+  }
+  
+  .services-overview .service-content {
+    padding: 20px;
+  }
+  
+  .services-overview .service-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-cta h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-cta .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-cta .btn-get-started,
+  .contact-cta .btn-watch-video {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-overview {
+    padding: 60px 0;
+  }
+  
+  .why-choose-us {
+    padding: 60px 0;
+  }
+  
+  .contact-cta {
+    padding: 60px 0;
+  }
+  
+  .why-choose-us .feature-box {
+    padding: 25px 15px;
+  }
+  
+  .why-choose-us .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .why-choose-us .icon-box i {
+    font-size: 1.5rem;
+  }
+}
+
+/* 图片弹窗样式 */
+.me-modal {
+  position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center;
+}
+.me-modal-content {
+  position: relative; background: #fff; border-radius: 8px; padding: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+.me-modal-close {
+  position: absolute; top: 8px; right: 12px; font-size: 2rem; color: #333; cursor: pointer;
+  z-index: 2;
+}

@@ -7,6 +7,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
@@ -25,49 +26,179 @@
           <li><a href="#contact">联系我们</a></li>
         </ul>
       </nav>
-      <a class="cta-btn" href="#contact">免费咨询</a>
     </div>
   </header>
+  
   <main class="main">
-    <section class="page-title dark-background">
+    <!-- Page Title Section -->
+    <section class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
-        <h1>服务介绍</h1>
-        <p>驱动您业务增长的数字化引擎</p>
+        <h1 data-aos="fade-up">服务介绍</h1>
+        <p data-aos="fade-up" data-aos-delay="100">驱动您业务增长的数字化引擎</p>
       </div>
     </section>
-    <section class="services section">
+
+    <!-- Services Overview Section -->
+    <section class="services-overview section">
       <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>我们的核心服务</h2>
+          <h3>专业的技术团队，为您提供全方位的数字化解决方案</h3>
+        </div>
+        
         <div class="row gy-5">
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-envelope-paper"></i></div>
-              <h3>EDM 营销自动化</h3>
-              <p>个性化邮件营销，自动化流程搭建，提升用户转化与留存，确保邮件高效送达。详细介绍：我们为企业量身定制邮件营销策略，结合自动化工具，实现精准触达与高效转化，助力企业业绩增长。</p>
+          <!-- EDM Marketing Automation -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <div class="service-img">
+                <img src="assets/img/services-1.jpg" class="img-fluid" alt="EDM营销自动化">
+                <div class="service-overlay">
+                  <div class="icon">
+                    <i class="bi bi-envelope-paper"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>EDM 营销自动化</h3>
+                <p>个性化邮件营销，自动化流程搭建，提升用户转化与留存，确保邮件高效送达。</p>
+                <ul class="service-features">
+                  <li><i class="bi bi-check-circle"></i> 个性化邮件模板设计</li>
+                  <li><i class="bi bi-check-circle"></i> 自动化触发机制</li>
+                  <li><i class="bi bi-check-circle"></i> 精准用户分层</li>
+                  <li><i class="bi bi-check-circle"></i> 实时数据分析</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-diagram-3"></i></div>
-              <h3>企业流程优化</h3>
-              <p>梳理并优化内部运营流程，引入智能工具，显著提升工作效率，降低运营成本。详细介绍：通过流程梳理、系统集成与自动化工具，帮助企业实现高效协同与成本管控。</p>
+
+          <!-- Business Process Optimization -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item h-100">
+              <div class="service-img">
+                <img src="assets/img/services-2.jpg" class="img-fluid" alt="企业流程优化">
+                <div class="service-overlay">
+                  <div class="icon">
+                    <i class="bi bi-diagram-3"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>企业流程优化</h3>
+                <p>梳理并优化内部运营流程，引入智能工具，显著提升工作效率，降低运营成本。</p>
+                <ul class="service-features">
+                  <li><i class="bi bi-check-circle"></i> 流程梳理与重构</li>
+                  <li><i class="bi bi-check-circle"></i> 智能工具集成</li>
+                  <li><i class="bi bi-check-circle"></i> 自动化工作流</li>
+                  <li><i class="bi bi-check-circle"></i> 效率提升分析</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-people"></i></div>
-              <h3>专业代运营服务</h3>
-              <p>提供一站式营销与运营管理，涵盖策略制定、内容执行、数据分析，释放企业精力专注核心业务。详细介绍：我们为企业提供全流程代运营服务，助力品牌成长与粉丝增长。</p>
+
+          <!-- Professional Operations Service -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item h-100">
+              <div class="service-img">
+                <img src="assets/img/services-3.jpg" class="img-fluid" alt="专业代运营服务">
+                <div class="service-overlay">
+                  <div class="icon">
+                    <i class="bi bi-people"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>专业代运营服务</h3>
+                <p>提供一站式营销与运营管理，涵盖策略制定、内容执行、数据分析，释放企业精力专注核心业务。</p>
+                <ul class="service-features">
+                  <li><i class="bi bi-check-circle"></i> 全渠道运营管理</li>
+                  <li><i class="bi bi-check-circle"></i> 内容创作与发布</li>
+                  <li><i class="bi bi-check-circle"></i> 数据分析与优化</li>
+                  <li><i class="bi bi-check-circle"></i> 品牌形象维护</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us section bg-light">
+      <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>为什么选择我们？</h2>
+          <h3>专业的团队，优质的服务，可靠的保障</h3>
+        </div>
+        
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-box text-center">
+              <div class="icon-box">
+                <i class="bi bi-award"></i>
+              </div>
+              <h4>专业认证</h4>
+              <p>拥有行业专业认证，技术实力有保障</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-box text-center">
+              <div class="icon-box">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h4>快速响应</h4>
+              <p>24小时响应机制，及时解决您的问题</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-box text-center">
+              <div class="icon-box">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <h4>效果保证</h4>
+              <p>数据驱动的优化策略，确保效果可衡量</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-box text-center">
+              <div class="icon-box">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>安全可靠</h4>
+              <p>严格的数据安全措施，保护您的商业机密</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   </main>
+
   <footer id="footer" class="footer dark-background">
     <div class="container copyright text-center mt-4">
       <p>&copy; 版权所有 <span id="current-year"></span> FutureLab 未来实验室. 保留所有权利。</p>
     </div>
     <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
   </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
+    });
+  </script>
 </body>
 </html> 

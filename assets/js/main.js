@@ -224,4 +224,38 @@
     }
   });
 
+  // 图片弹窗逻辑
+  document.addEventListener('DOMContentLoaded', function() {
+    // 弹窗相关
+    var meModal = document.getElementById('me-modal');
+    var meModalClose = document.querySelector('.me-modal-close');
+    function showMeModal() { meModal.style.display = 'flex'; }
+    function hideMeModal() { meModal.style.display = 'none'; }
+    if(meModalClose) meModalClose.addEventListener('click', hideMeModal);
+    if(meModal) meModal.addEventListener('click', function(e) {
+      if (e.target === meModal) hideMeModal();
+    });
+
+    // 顶部菜单栏"博客/资源"
+    document.querySelectorAll('a[href="blog.html"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        showMeModal();
+      });
+    });
+
+    // 底部微信按钮
+    var wechatBtn = document.querySelector('.footer .bi-wechat')?.parentElement;
+    if (wechatBtn) {
+      wechatBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        showMeModal();
+      });
+    }
+
+    // 删除底部LinkedIn按钮
+    var linkedinBtn = document.querySelector('.footer .bi-linkedin')?.parentElement;
+    if (linkedinBtn) linkedinBtn.remove();
+  });
+
 })();
