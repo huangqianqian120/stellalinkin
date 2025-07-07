@@ -13,3 +13,4 @@ assets/scss/
 # 其他常见临时文件
 *.log
 Thumbs.db 
+.vercel
