@@ -2164,3 +2164,64 @@ section,
   position: absolute; top: 8px; right: 12px; font-size: 2rem; color: #333; cursor: pointer;
   z-index: 2;
 }
+
+/* 语言选择器样式 */
+.language-selector {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+}
+.lang-btn {
+  background: none;
+  border: 1px solid var(--nav-color);
+  color: var(--nav-color);
+  padding: 5px 10px;
+  margin: 0 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+.lang-btn:hover {
+  background: var(--nav-hover-color);
+  color: var(--contrast-color);
+  border-color: var(--nav-hover-color);
+}
+.lang-btn.active {
+  background: var(--nav-hover-color);
+  color: var(--contrast-color);
+  border-color: var(--nav-hover-color);
+}
+@media (max-width: 1199px) {
+  .header .container-xl {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navmenu {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  .language-selector {
+    margin: 10px 0 0 0;
+    justify-content: flex-start;
+  }
+}
+
+.header .container-xl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navmenu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navmenu ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}

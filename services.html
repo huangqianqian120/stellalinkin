@@ -3,28 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>服务介绍 - FutureLab 未来实验室</title>
+  <title data-i18n="title.services">服务介绍 - <span data-i18n="sitename"></span></title>
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
 </head>
 <body>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename">FutureLab 未来实验室</h1>
+        <h1 class="sitename" data-i18n="sitename">StellaLinkin</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">首页</a></li>
-          <li><a href="about-us.html">关于我们</a></li>
-          <li><a href="services.html" class="active">服务介绍</a></li>
-          <li><a href="case-studies.html">案例展示</a></li>
-          <li><a href="blog.html">博客/资源</a></li>
-          <li><a href="#contact">联系我们</a></li>
+          <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+          <li><a href="about-us.html" data-i18n="nav.about">关于我们</a></li>
+          <li><a href="services.html" class="active" data-i18n="nav.services">服务介绍</a></li>
+          <li><a href="case-studies.html" data-i18n="nav.portfolio">案例展示</a></li>
+          <li><a href="blog.html" data-i18n="nav.blog">博客/资源</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">联系我们</a></li>
         </ul>
+        <div class="language-selector">
+          <button class="lang-btn lang-zh active" onclick="changeLanguage('zh')" data-i18n="lang.zh">中文</button>
+          <button class="lang-btn lang-en" onclick="changeLanguage('en')" data-i18n="lang.en">English</button>
+        </div>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
@@ -33,8 +40,8 @@
     <!-- Page Title Section -->
     <section class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
-        <h1 data-aos="fade-up">服务介绍</h1>
-        <p data-aos="fade-up" data-aos-delay="100">驱动您业务增长的数字化引擎</p>
+        <h1 data-i18n="services.title">服务介绍</h1>
+        <p data-i18n="services.subtitle">驱动您业务增长的数字化引擎</p>
       </div>
     </section>
 
@@ -42,8 +49,8 @@
     <section class="services-overview section">
       <div class="container">
         <div class="section-title text-center" data-aos="fade-up">
-          <h2>我们的核心服务</h2>
-          <h3>专业的技术团队，为您提供全方位的数字化解决方案</h3>
+          <h2 data-i18n="services.title">我们的核心服务</h2>
+          <h3 data-i18n="services.subtitle">专业的技术团队，为您提供全方位的数字化解决方案</h3>
         </div>
         
         <div class="row gy-5">
@@ -59,13 +66,13 @@
                 </div>
               </div>
               <div class="service-content">
-                <h3>EDM 营销自动化</h3>
-                <p>个性化邮件营销，自动化流程搭建，提升用户转化与留存，确保邮件高效送达。</p>
+                <h3 data-i18n="service.edm.title">EDM 营销自动化</h3>
+                <p data-i18n="service.edm.desc">个性化邮件营销，自动化流程搭建，提升用户转化与留存，确保邮件高效送达。</p>
                 <ul class="service-features">
-                  <li><i class="bi bi-check-circle"></i> 个性化邮件模板设计</li>
-                  <li><i class="bi bi-check-circle"></i> 自动化触发机制</li>
-                  <li><i class="bi bi-check-circle"></i> 精准用户分层</li>
-                  <li><i class="bi bi-check-circle"></i> 实时数据分析</li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.edm.f1">个性化邮件模板设计</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.edm.f2">自动化触发机制</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.edm.f3">精准用户分层</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.edm.f4">实时数据分析</span></li>
                 </ul>
               </div>
             </div>
@@ -83,13 +90,13 @@
                 </div>
               </div>
               <div class="service-content">
-                <h3>企业流程优化</h3>
-                <p>梳理并优化内部运营流程，引入智能工具，显著提升工作效率，降低运营成本。</p>
+                <h3 data-i18n="service.proc.title">企业流程优化</h3>
+                <p data-i18n="service.proc.desc">梳理并优化内部运营流程，引入智能工具，显著提升工作效率，降低运营成本。</p>
                 <ul class="service-features">
-                  <li><i class="bi bi-check-circle"></i> 流程梳理与重构</li>
-                  <li><i class="bi bi-check-circle"></i> 智能工具集成</li>
-                  <li><i class="bi bi-check-circle"></i> 自动化工作流</li>
-                  <li><i class="bi bi-check-circle"></i> 效率提升分析</li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.proc.f1">流程梳理与重构</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.proc.f2">智能工具集成</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.proc.f3">自动化工作流</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.proc.f4">效率提升分析</span></li>
                 </ul>
               </div>
             </div>
@@ -107,13 +114,13 @@
                 </div>
               </div>
               <div class="service-content">
-                <h3>专业代运营服务</h3>
-                <p>提供一站式营销与运营管理，涵盖策略制定、内容执行、数据分析，释放企业精力专注核心业务。</p>
+                <h3 data-i18n="service.agency.title">专业代运营服务</h3>
+                <p data-i18n="service.agency.desc">一站式营销与运营管理，涵盖策略制定、内容执行、数据分析，释放企业精力专注核心业务。</p>
                 <ul class="service-features">
-                  <li><i class="bi bi-check-circle"></i> 全渠道运营管理</li>
-                  <li><i class="bi bi-check-circle"></i> 内容创作与发布</li>
-                  <li><i class="bi bi-check-circle"></i> 数据分析与优化</li>
-                  <li><i class="bi bi-check-circle"></i> 品牌形象维护</li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.agency.f1">全渠道运营管理</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.agency.f2">内容创作与发布</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.agency.f3">数据分析与优化</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span data-i18n="service.agency.f4">品牌形象维护</span></li>
                 </ul>
               </div>
             </div>
@@ -126,8 +133,8 @@
     <section class="why-choose-us section bg-light">
       <div class="container">
         <div class="section-title text-center" data-aos="fade-up">
-          <h2>为什么选择我们？</h2>
-          <h3>专业的团队，优质的服务，可靠的保障</h3>
+          <h2 data-i18n="why.title">为什么选择我们？</h2>
+          <h3 data-i18n="why.subtitle">专业的团队，优质的服务，可靠的保障</h3>
         </div>
         
         <div class="row gy-4">
@@ -136,8 +143,8 @@
               <div class="icon-box">
                 <i class="bi bi-award"></i>
               </div>
-              <h4>专业认证</h4>
-              <p>拥有行业专业认证，技术实力有保障</p>
+              <h4 data-i18n="why.cert">专业认证</h4>
+              <p data-i18n="why.cert.desc">拥有行业专业认证，技术实力有保障</p>
             </div>
           </div>
           
@@ -146,8 +153,8 @@
               <div class="icon-box">
                 <i class="bi bi-clock-history"></i>
               </div>
-              <h4>快速响应</h4>
-              <p>24小时响应机制，及时解决您的问题</p>
+              <h4 data-i18n="why.fast">快速响应</h4>
+              <p data-i18n="why.fast.desc">24小时响应机制，及时解决您的问题</p>
             </div>
           </div>
           
@@ -156,8 +163,8 @@
               <div class="icon-box">
                 <i class="bi bi-graph-up"></i>
               </div>
-              <h4>效果保证</h4>
-              <p>数据驱动的优化策略，确保效果可衡量</p>
+              <h4 data-i18n="why.effect">效果保证</h4>
+              <p data-i18n="why.effect.desc">数据驱动的优化策略，确保效果可衡量</p>
             </div>
           </div>
           
@@ -166,8 +173,8 @@
               <div class="icon-box">
                 <i class="bi bi-shield-check"></i>
               </div>
-              <h4>安全可靠</h4>
-              <p>严格的数据安全措施，保护您的商业机密</p>
+              <h4 data-i18n="why.safe">安全可靠</h4>
+              <p data-i18n="why.safe.desc">严格的数据安全措施，保护您的商业机密</p>
             </div>
           </div>
         </div>
@@ -179,7 +186,7 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container copyright text-center mt-4">
-      <p>&copy; 版权所有 <span id="current-year"></span> FutureLab 未来实验室. 保留所有权利。</p>
+      <p><span data-i18n="footer.copyright">版权所有</span> <span id="current-year"></span> <span data-i18n="sitename">StellaLinkin</span>. <span data-i18n="footer.rights">保留所有权利。</span></p>
     </div>
     <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
   </footer>
@@ -187,9 +194,6 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
   
   <!-- Initialize AOS -->
   <script>
