@@ -18,20 +18,23 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename" data-i18n="sitename">StellaLinkin</h1>
       </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <ul id="mobile-nav-menu">
           <li><a href="index.html" data-i18n="nav.home">首页</a></li>
           <li><a href="about-us.html" data-i18n="nav.about">关于我们</a></li>
           <li><a href="services.html" class="active" data-i18n="nav.services">服务介绍</a></li>
           <li><a href="case-studies.html" data-i18n="nav.portfolio">案例展示</a></li>
-          <li><a href="blog.html" data-i18n="nav.blog">博客/资源</a></li>
           <li><a href="#contact" data-i18n="nav.contact">联系我们</a></li>
         </ul>
-        <div class="language-selector">
-          <button class="lang-btn lang-zh active" onclick="changeLanguage('zh')" data-i18n="lang.zh">中文</button>
-          <button class="lang-btn lang-en" onclick="changeLanguage('en')" data-i18n="lang.en">English</button>
+        <div class="language-selector ms-2">
+          <button class="lang-toggle" aria-label="切换语言">
+            <i class="bi bi-globe"></i>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-btn lang-zh" onclick="changeLanguage('zh')" data-i18n="lang.zh">中文</button>
+            <button class="lang-btn lang-en" onclick="changeLanguage('en')" data-i18n="lang.en">English</button>
+          </div>
         </div>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
@@ -194,6 +197,8 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
   
   <!-- Initialize AOS -->
   <script>
@@ -213,4 +218,4 @@
     </div>
   </div>
 </body>
-</html> 
+</html>

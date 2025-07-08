@@ -42,20 +42,23 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename" data-i18n="sitename">StellaLinkin</h1>
       </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <ul id="mobile-nav-menu">
           <li><a href="#hero" data-i18n="nav.home">首页</a></li>
           <li><a href="#about" data-i18n="nav.about">关于我们</a></li>
           <li><a href="#services" data-i18n="nav.services">服务介绍</a></li>
           <li><a href="#portfolio" data-i18n="nav.portfolio">案例展示</a></li>
-          <li><a href="blog.html" data-i18n="nav.blog">博客/资源</a></li>
           <li><a href="#contact" data-i18n="nav.contact">联系我们</a></li>
         </ul>
-        <div class="language-selector">
-          <button class="lang-btn lang-zh active" onclick="changeLanguage('zh')" data-i18n="lang.zh">中文</button>
-          <button class="lang-btn lang-en" onclick="changeLanguage('en')" data-i18n="lang.en">English</button>
+        <div class="language-selector ms-2">
+          <button class="lang-toggle" aria-label="切换语言">
+            <i class="bi bi-globe"></i>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-btn lang-zh" onclick="changeLanguage('zh')" data-i18n="lang.zh">中文</button>
+            <button class="lang-btn lang-en" onclick="changeLanguage('en')" data-i18n="lang.en">English</button>
+          </div>
         </div>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
     </div>
@@ -67,7 +70,6 @@
       <div class="container d-flex flex-column align-items-center">
         <h1 data-i18n="hero.title" class="text-center">助您高效驱动增长，实现营销与运营的数字化转型</h1>
         <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="#contact" class="btn-get-started" data-i18n="hero.cta">立即开启增长之旅</a>
           <a href="services.html" class="btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span data-i18n="hero.watch">了解我们的服务</span></a>
         </div>
       </div>
@@ -77,7 +79,10 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 data-i18n="about.title">您的数字化增长伙伴</h3>
+            <div class="section-title">
+              <h2 data-i18n="about.title">关于我们</h2>
+              <h3 data-i18n="about.subtitle">您的数字化增长伙伴</h3>
+            </div>
             <p data-i18n="about.p1">我们深知中小企业在数字化转型中面临的挑战，如邮件营销效果不佳、内部流程混乱、缺乏专业运营团队等。</p>
             <p data-i18n="about.p2">作为专注于EDM营销自动化、企业流程优化和专业代运营的创新服务商，我们致力于提供一站式、量身定制的解决方案。凭借深厚的行业经验和前沿技术，我们帮助企业优化核心业务、提升营销效率，最终实现卓越运营与持续增长。</p>
             <p data-i18n="about.p3">选择我们，让您的企业在数字化浪潮中高效前行。</p>
@@ -368,7 +373,6 @@
             <li><i class="bi bi-chevron-right"></i> <a href="about-us.html" data-i18n="footer.link.about">关于我们</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="services.html" data-i18n="footer.link.services">服务介绍</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="case-studies.html" data-i18n="footer.link.cases">案例展示</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="blog.html" data-i18n="footer.link.blog">博客/资源</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#contact" data-i18n="footer.link.contact">联系我们</a></li>
           </ul>
         </div>
@@ -398,6 +402,37 @@
       <img src="assets/img/me.jpg" alt="me" class="img-fluid" style="max-width:90vw;max-height:90vh;">
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.getElementById('mobile-nav-toggle');
+      var menu = document.getElementById('mobile-nav-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          menu.classList.toggle('active');
+        });
+        menu.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            menu.classList.remove('active');
+          });
+        });
+      }
+      // 语言切换地球按钮
+      var langToggle = document.querySelector('.lang-toggle');
+      var langDropdown = document.querySelector('.lang-dropdown');
+      if (langToggle && langDropdown) {
+        langToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          langDropdown.classList.toggle('active');
+        });
+        document.body.addEventListener('click', function() {
+          langDropdown.classList.remove('active');
+        });
+        langDropdown.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

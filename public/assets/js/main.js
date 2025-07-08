@@ -1,3 +1,4 @@
+console.log('main.js loaded');/**
 /**
 * Template Name: Dewi
 * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
@@ -32,31 +33,38 @@
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  if (mobileNavToggleBtn) {
+    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
+  var navmenuLinks = document.querySelectorAll('#navmenu a');
+  if (navmenuLinks && navmenuLinks.length) {
+    navmenuLinks.forEach(function(navmenu) {
+      navmenu.addEventListener('click', () => {
+        if (document.querySelector('.mobile-nav-active')) {
+          mobileNavToogle();
+        }
+      });
     });
-
-  });
+  }
 
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
+  var navmenuDropdowns = document.querySelectorAll('.navmenu .toggle-dropdown');
+  if (navmenuDropdowns && navmenuDropdowns.length) {
+    navmenuDropdowns.forEach(function(navmenu) {
+      navmenu.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentNode.classList.toggle('active');
+        this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+        e.stopImmediatePropagation();
+      });
     });
-  });
+  }
 
   /**
    * Preloader
@@ -78,13 +86,15 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -101,13 +111,6 @@
     });
   }
   window.addEventListener('load', aosInit);
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
 
   /**
    * Initiate Pure Counter
@@ -206,8 +209,8 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  // 手机号前端校验（如有手机号输入框）
   document.addEventListener('DOMContentLoaded', function() {
+    // 手机号前端校验（如有手机号输入框）
     var phoneInput = document.querySelector('input[name="phone"]');
     if(phoneInput) {
       phoneInput.addEventListener('input', function() {
@@ -222,29 +225,26 @@
         }
       });
     }
-  });
 
-  // 图片弹窗逻辑
-  document.addEventListener('DOMContentLoaded', function() {
-    // 弹窗相关
+    // 图片弹窗逻辑
     var meModal = document.getElementById('me-modal');
     var meModalClose = document.querySelector('.me-modal-close');
-    function showMeModal() { meModal.style.display = 'flex'; }
-    function hideMeModal() { meModal.style.display = 'none'; }
+    function showMeModal() { if(meModal) meModal.style.display = 'flex'; }
+    function hideMeModal() { if(meModal) meModal.style.display = 'none'; }
     if(meModalClose) meModalClose.addEventListener('click', hideMeModal);
     if(meModal) meModal.addEventListener('click', function(e) {
       if (e.target === meModal) hideMeModal();
     });
-
-    // 顶部菜单栏"博客/资源"
-    document.querySelectorAll('a[href="blog.html"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        showMeModal();
+    // 移除 a[href='blog.html'] 相关绑定，统一用 .show-me-modal
+    var showMeModalLinks = document.querySelectorAll('.show-me-modal');
+    if (showMeModalLinks && showMeModalLinks.length) {
+      showMeModalLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          showMeModal();
+        });
       });
-    });
-
-    // 底部微信按钮
+    }
     var wechatBtn = document.querySelector('.footer .bi-wechat')?.parentElement;
     if (wechatBtn) {
       wechatBtn.addEventListener('click', function(e) {
@@ -252,10 +252,47 @@
         showMeModal();
       });
     }
-
-    // 删除底部LinkedIn按钮
     var linkedinBtn = document.querySelector('.footer .bi-linkedin')?.parentElement;
     if (linkedinBtn) linkedinBtn.remove();
+
+    // 语言切换地球按钮和下拉菜单（事件委托，支持动态渲染）
+    document.body.addEventListener('click', function(e) {
+      if (e.target.classList.contains('lang-toggle')) {
+        e.stopPropagation();
+        var dropdown = e.target.nextElementSibling;
+        if (dropdown && dropdown.classList.contains('lang-dropdown')) {
+          document.querySelectorAll('.lang-dropdown.active').forEach(function(d){d.classList.remove('active');});
+          dropdown.classList.toggle('active');
+        }
+      } else {
+        document.querySelectorAll('.lang-dropdown.active').forEach(function(d){d.classList.remove('active');});
+      }
+    });
+
+    // 其他 addEventListener 绑定前也加 null 判断
+    var mobileNavToggle = document.getElementById('mobile-nav-toggle');
+    var mobileNavMenu = document.getElementById('mobile-nav-menu');
+    if (mobileNavToggle && mobileNavMenu) {
+      mobileNavToggle.addEventListener('click', function() {
+        mobileNavMenu.classList.toggle('active');
+      });
+      mobileNavMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNavMenu.classList.remove('active');
+        });
+      });
+    }
+
+    console.log('lang-toggle binding start');
+     // 事件绑定代码
+     console.log('lang-toggle binding end');
+
+    // 初始化 GLightbox
+    if (typeof GLightbox !== 'undefined') {
+      const glightbox = GLightbox({
+        selector: '.glightbox'
+      });
+    }
   });
 
 })();

@@ -794,6 +794,11 @@ h6 {
   }
 }
 
+.lang-dropdown.active {
+  display: flex !important;
+  flex-direction: column;
+}
+
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
@@ -1595,7 +1600,6 @@ section,
   bottom: 0;
   left: 0;
 }
-
 .team .member span {
   font-style: italic;
   display: block;
@@ -1840,10 +1844,8 @@ section,
 
 /*--------------------------------------------------------------
 # Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+-------------------------------------------------------------
+  /* Add your styles here 
 
 /*--------------------------------------------------------------
 # Enhanced Services Page Styles
@@ -2193,35 +2195,82 @@ section,
   border-color: var(--nav-hover-color);
 }
 @media (max-width: 1199px) {
-  .header .container-xl {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navmenu {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0;
-  }
   .language-selector {
-    margin: 10px 0 0 0;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    gap: 4px;
+  }
+  .lang-toggle {
+    display: inline-block !important;
+  }
+  
+  .lang-btn {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    border: none;
+    background: none;
+    color: #333;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .lang-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.header .container-xl {
+/* 地球按钮极简风格修正（强制覆盖） */
+.lang-toggle {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 8px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: color 0.2s;
+}
+.lang-toggle:active,
+.lang-toggle:focus,
+.lang-toggle:hover {
+  background: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.lang-toggle i {
+  color: #fff !important;
+  font-size: 1.5em !important;
+  line-height: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+/* 下拉菜单默认隐藏，仅active时显示（唯一保留） */
+.lang-dropdown {
+  display: none !important;
+  min-width: 100px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 0.3em 0;
+  right: 0;
+  top: 28px;
+  position: absolute;
+  z-index: 999;
 }
 
-.navmenu {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.navmenu ul {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0;
+.lang-dropdown.active {
+  display: flex !important;
+  flex-direction: column;
 }

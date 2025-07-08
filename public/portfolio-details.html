@@ -47,20 +47,26 @@
         <h1 class="sitename">Dewi</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <div class="nav-actions d-flex align-items-center" style="width:100%;justify-content:flex-end;">
+          <i class="mobile-nav-toggle d-xl-none bi bi-list" id="mobile-nav-toggle"></i>
+          <div class="language-selector ms-2">
+            <button class="lang-toggle" aria-label="切换语言">
+              <i class="bi bi-globe"></i>
+            </button>
+            <div class="lang-dropdown">
+              <button class="lang-btn lang-zh" onclick="changeLanguage('zh')" data-i18n="lang.zh">中文</button>
+              <button class="lang-btn lang-en" onclick="changeLanguage('en')" data-i18n="lang.en">English</button>
+            </div>
+          </div>
+        </div>
+        <ul id="mobile-nav-menu">
           <li><a href="index.html" data-i18n="nav.home">首页</a></li>
           <li><a href="about-us.html" data-i18n="nav.about">关于我们</a></li>
           <li><a href="services.html" data-i18n="nav.services">服务介绍</a></li>
           <li><a href="case-studies.html" data-i18n="nav.portfolio">案例展示</a></li>
-          <li><a href="blog.html" data-i18n="nav.blog">博客/资源</a></li>
           <li><a href="#contact" data-i18n="nav.contact">联系我们</a></li>
         </ul>
-        <div class="language-selector">
-          <button class="lang-btn lang-zh active" onclick="changeLanguage('zh')" data-i18n="lang.zh">中文</button>
-          <button class="lang-btn lang-en" onclick="changeLanguage('en')" data-i18n="lang.en">English</button>
-        </div>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
     </div>

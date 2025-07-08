@@ -13,9 +13,10 @@ const translations = {
     'hero.watch': '了解我们的服务',
     // 关于我们
     'about.title': '关于我们',
-    'about.p1': '您的数字化增长伙伴',
-    'about.p2': '我们深知中小企业在数字化转型中面临的挑战，如邮件营销效果不佳、内部流程混乱、缺乏专业运营团队等。',
-    'about.p3': '作为专注于EDM营销自动化、企业流程优化和专业代运营的创新服务商，我们致力于提供一站式、量身定制的解决方案。凭借深厚的行业经验和前沿技术，我们帮助企业优化核心业务、提升营销效率，最终实现卓越运营与持续增长。',
+    'about.subtitle': '您的数字化增长伙伴',
+    'about.p1': '我们深知中小企业在数字化转型中面临的挑战，如邮件营销效果不佳、内部流程混乱、缺乏专业运营团队等。',
+    'about.p2': '作为专注于EDM营销自动化、企业流程优化和专业代运营的创新服务商，我们致力于提供一站式、量身定制的解决方案。凭借深厚的行业经验和前沿技术，我们帮助企业优化核心业务、提升营销效率，最终实现卓越运营与持续增长。',
+    'about.p3': '选择我们，让您的企业在数字化浪潮中高效前行。',
     'about.p4': '选择我们，让您的企业在数字化浪潮中高效前行。',
     // 服务
     'services.title': '我们的核心服务',
@@ -138,9 +139,10 @@ const translations = {
     'hero.watch': 'Learn About Our Services',
     // About
     'about.title': 'About Us',
-    'about.p1': 'Your Digital Growth Partner',
-    'about.p2': 'We understand the challenges SMEs face in digital transformation, such as ineffective email marketing, chaotic internal processes, and lack of a professional operations team.',
-    'about.p3': 'As an innovative service provider specializing in EDM marketing automation, business process optimization, and professional agency operations, we are committed to providing one-stop, customized solutions. With deep industry experience and cutting-edge technology, we help companies optimize core business, improve marketing efficiency, and achieve excellent operations and sustainable growth.',
+    'about.subtitle': 'Your Digital Growth Partner',
+    'about.p1': 'We understand the challenges SMEs face in digital transformation, such as ineffective email marketing, chaotic internal processes, and lack of a professional operations team.',
+    'about.p2': 'As an innovative service provider specializing in EDM marketing automation, business process optimization, and professional agency operations, we are committed to providing one-stop, customized solutions. With deep industry experience and cutting-edge technology, we help companies optimize core business, improve marketing efficiency, and achieve excellent operations and sustainable growth.',
+    'about.p3': 'Choose us to help your business move forward efficiently in the digital wave.',
     'about.p4': 'Choose us to help your business move forward efficiently in the digital wave.',
     // Services
     'services.title': 'Our Core Services',
